@@ -1,6 +1,12 @@
 .onLoad <- function(libname, pkgname){
-    pkgs <- grep( "package:", search(), value = TRUE )
-    pkgs <- setdiff( pkgs, "package:base" )
-    sapply( pkgs, detach, character.only = TRUE )  
+    
+    repeat {
+        pkgs <- grep( "package:", search(), value = TRUE )
+        if( length(pkgs) == 1L ) break
+        pkgs <- sub( "package:", "", setdiff( pkgs, "package:base" ) )
+        for( pkg in pkgs ){
+            try( unloadNamespace(pkg), silent = TRUE )    
+        }
+    }
 }
 
