@@ -1,0 +1,9 @@
+Package: nothing
+Title: A package about nothing
+Version: 0.0.0.0.0.0
+Date: 2014-04-25
+Authors: Romain Francois <romain@r-enthusiasts.com>
+Description: A package about nothing
+Depends: R (>= 3.1.0)
+License: GPL-2
+
