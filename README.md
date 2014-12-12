@@ -11,15 +11,11 @@ anything, and therefore `nothing` assumes you are fine just using the
 
 ```
 > loadedNamespaces()
- [1] "base"      "datasets"  "devtools"  "digest"    "evaluate"  "graphics"
- [7] "grDevices" "httr"      "memoise"   "methods"   "parallel"  "RCurl"
-[13] "stats"     "stringr"   "tools"     "utils"     "whisker"
->
-> require(nothing)
-Loading required package: nothing
-unloading 'methods' package ...
-Failed with error:  ‘invalid 'pos' argument’
->
+[1] "base"      "datasets"  "grDevices" "graphics"  "methods"   "stats"
+[7] "utils"
+> 
+> require(nothing, quietly = TRUE)
+> 
 > loadedNamespaces()
 [1] "base"
 ```
